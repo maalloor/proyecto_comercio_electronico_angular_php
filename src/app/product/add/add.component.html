@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header text-light bg-dark">
+            <h2>Añadir Producto</h2>
+        </div>
+        <div class="card-body">
+            <form ngNativeValidate [formGroup]="formProduct" (ngSubmit)="sendData()">
+
+                <div class="mb-3">
+                  <label for="" class="form-label">Nombre: </label>
+                  <input required type="text"
+                    class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Escribe el nombre del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Descripción: </label>
+                    <input required type="text"
+                      class="form-control" name="" formControlName="description" id="" aria-describedby="helpId" placeholder="Escribe la descripción del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Precio: </label>
+                    <input required type="text"
+                      class="form-control" name="" formControlName="price" id="" aria-describedby="helpId" placeholder="Escribe el precio del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Talla: </label>
+                    <input required type="text"
+                      class="form-control" name="" formControlName="size" id="" aria-describedby="helpId" placeholder="Escribe la talla del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Categoría: </label>
+                    <input required type="text"
+                      class="form-control" name="" formControlName="category" id="" aria-describedby="helpId" placeholder="Escribe la categoría del producto">
+                </div>
+
+                <div class="btn-group" role="group" aria-label="">
+
+                    <button type="submit" class="btn btn-success">Guardar Producto</button>
+
+                    <button type="button" routerLink="/index/" class="btn btn-danger">Cancelar</button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

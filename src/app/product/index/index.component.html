@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header text-light bg-dark">
+        <h2>Productos registrados</h2>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-primary" routerLink="/add/"><img src="https://image.flaticon.com/icons/png/512/1037/1037287.png" width="40" height="40">    Añadir nuevo producto</a>
+        <hr>
+        <br>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Id Producto</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Talla</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let product of Products; let iControl=index">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.nombre }}</td>
+                    <td>{{ product.descripcion }}</td>
+                    <td>{{ product.precio }}</td>
+                    <td>{{ product.talla }}</td>
+                    <td>{{ product.categoria }}</td>
+                    <td>
+                        <a class="btn btn-warning" routerLink="/edit/{{ product.id }}">
+                            <img src="https://image.flaticon.com/icons/png/512/2919/2919592.png" width="25" height="25" alt="">
+                        </a>
+                        
+                        <a class="btn btn-danger" (click)="dropRegister(product.id,iControl)"role="button">
+                            <img src="https://image.flaticon.com/icons/png/512/1828/1828843.png" width="25" height="25" alt="">
+                        </a>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+</div>
